@@ -18,92 +18,112 @@
   <body>
     <div id="page">
       <main>
-        <div class="home">
-          <h1>Explore sem limites</h1>
-          <p>Porque o aprendizado é contínuo</p>
+        <section id="home">
+          <div class="container">
+            <img
+              src="./assets/img-home.png"
+              alt="Desenho de um astronauta flutuando na galáxia com planetas e estrelas ao fundo."
+            />
 
-          <img
-            src="./assets/img-home.png"
-            alt="Desenho de um astronauta flutuando na galáxia com planetas e estrelas ao fundo."
-          />
-
-          <img
-            src="./assets/icon-scrolldown.svg"
-            alt="Ícone scroll down: role o scroll do mouse para baixo para continuar visualizando a página."
-          />
-        </div>
-
-        <div class="about">
-          <div class="card">
-            <img src="./assets/img-planet-yellow.png" alt="Imagem de um planeta redondo na cor amarela." />
-
-            <h2>Não pare nunca</h2>
-
-            <p>
-              Se você deseja ter sucesso nos estudos, é fundamental que você
-              adote uma mentalidade de "não pare nunca". Estudar de forma
-              consistente e contínua é a chave para o progresso e a conquista de
-              seus objetivos.
-            </p>
+            <h1>Explore sem limites</h1>
+            <p>Porque o aprendizado é contínuo</p>
+            <img
+              src="./assets/icon-scrolldown.svg"
+              alt="Ícone scroll down: role o scroll do mouse para baixo para continuar visualizando a página."
+            />
           </div>
+        </section>
 
-          <div class="card">
-            <img src="./assets/img-planet-blue.png" alt="Imagem de um planeta redondo na cor azul." />
+        <section id="about">
+          <div class="container">
+            <div class="card">
+              <img
+                src="./assets/img-planet-yellow.png"
+                alt="Imagem de um planeta redondo na cor amarela."
+              />
 
-            <h2>Só volta</h2>
+              <h2>Não pare nunca</h2>
 
-            <p>
-              Se você parou ou perdeu o ritmo em alguma atividade ou projeto,
-              saiba que nunca é tarde para recomeçar. Às vezes, as
-              circunstâncias podem mudar, ou podemos nos sentir desmotivados ou
-              sobrecarregados.
-            </p>
-          </div>
-
-          <div class="card">
-            <img src="./assets/img-planet-pink.png" alt="Imagem de um planeta redondo na cor rosa." />
-
-            <h2>Siga seu ritmo</h2>
-
-            <p>
-              Avançar pouco a pouco mantém progresso constante em objetivos,
-              evitando parar ou desistir. Mesmo pequenos passos nos aproximam do
-              destino e motivam a continuidade. Não subestime o poder de cada
-              ação rumo ao objetivo final.
-            </p>
-          </div>
-        </div>
-
-        <div class="contato">
-          <form method="POST">
-            <fieldset>
-              <legend>Entre em contato</legend>
-
-            <div class="input-wrapper">
-              <label for="name">Seu nome</label>
-              <input id="name" type="text" placeholder="Seu nome" />
+              <p>
+                Se você deseja ter sucesso nos estudos, é fundamental que você
+                adote uma mentalidade de "não pare nunca". Estudar de forma
+                consistente e contínua é a chave para o progresso e a conquista
+                de seus objetivos.
+              </p>
             </div>
 
-            <div class="input-wrapper">
-              <label for="email">Email</label>
-              <input id="email" type="text" placeholder="Email" />
+            <div class="card">
+              <img
+                src="./assets/img-planet-blue.png"
+                alt="Imagem de um planeta redondo na cor azul."
+              />
+
+              <h2>Só volta</h2>
+
+              <p>
+                Se você parou ou perdeu o ritmo em alguma atividade ou projeto,
+                saiba que nunca é tarde para recomeçar. Às vezes, as
+                circunstâncias podem mudar, ou podemos nos sentir desmotivados
+                ou sobrecarregados.
+              </p>
             </div>
 
-            <div class="input-wrapper">
-              <label for="message">Mensagem</label>
-              <textarea
-                id="message"
-                name=""
-                placeholder="Digite sua mensagem aqui..."
-              ></textarea>
-            </div>
+            <div class="card">
+              <img
+                src="./assets/img-planet-pink.png"
+                alt="Imagem de um planeta redondo na cor rosa."
+              />
 
-            <button>Enviar Mensagem</button>
-          </fieldset>
-          </form>
-        </div>
+              <h2>Siga seu ritmo</h2>
+
+              <p>
+                Avançar pouco a pouco mantém progresso constante em objetivos,
+                evitando parar ou desistir. Mesmo pequenos passos nos aproximam
+                do destino e motivam a continuidade. Não subestime o poder de
+                cada ação rumo ao objetivo final.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact">
+          <div class="container">
+            <form id="form-contact" method="POST">
+              <fieldset>
+                <legend>Entre em contato</legend>
+
+                <div class="input-wrapper">
+                  <label for="name">Seu nome</label>
+                  <input
+                    id="name"
+                    type="text"
+                    placeholder="Seu nome"
+                    required
+                  />
+                </div>
+
+                <div class="input-wrapper">
+                  <label for="email">Email</label>
+                  <input id="email" type="email" placeholder="Email" required />
+                </div>
+
+                <div class="input-wrapper">
+                  <label for="message">Mensagem</label>
+                  <textarea
+                    id="message"
+                    name=""
+                    placeholder="Digite sua mensagem aqui..."
+                    required
+                  ></textarea>
+                </div>
+
+                <button>Enviar Mensagem</button>
+              </fieldset>
+            </form>
+          </div>
+        </section>
       </main>
-      
+
       <footer>
         <p>© 2023 - Rocketseat Explorer</p>
       </footer>
