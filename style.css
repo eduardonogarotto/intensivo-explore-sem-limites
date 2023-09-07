@@ -1,6 +1,10 @@
 :root {
   font-size: 62.5%; /* 1rem = 10px */
 
+  /*Melhorando a qualidade das fontes (textos) */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
   --color-base-white: #ffffff;
   --color-base-blue: #312d64;
   --color-base-blue-gradient: linear-gradient(
@@ -42,20 +46,17 @@ footer {
   background: var(--color-base-blue-gradient);
 }
 
-#page {
-  width: 100%;
-  margin: 0 auto;
-}
-
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#home .container {
-  min-height: 100vh;
+#home {
+  height: 100vh;
+}
 
+#home .container {
   text-align: center;
 
   padding: 0 4rem 9rem;
@@ -76,6 +77,11 @@ footer {
   font-weight: 600;
 
   margin-bottom: 3.5rem;
+}
+
+#home img:last-child {
+  width: 5.9rem;
+  height: 10.5rem;
 }
 
 #about .container {
@@ -140,16 +146,19 @@ footer {
 }
 
 #contact #name {
-  background: url(./assets/icon-person.svg) no-repeat left 1.4rem top 50%;
+  background: var(--color-base-white) url(./assets/icon-person.svg) no-repeat
+    left 1.4rem top 50%;
 }
 
 #contact #email {
-  background: url(./assets/icon-atsign.svg) no-repeat left 1.4rem top 50%;
+  background: var(--color-base-white) url(./assets/icon-atsign.svg) no-repeat
+    left 1.4rem top 50%;
 }
 
 #contact textarea {
   height: 12.6rem;
   padding: 1.2rem 1.6rem;
+  background: var(--color-base-white);
 }
 
 #contact button {
@@ -178,3 +187,124 @@ footer p {
 
   padding: 1.6rem;
 }
+
+/* Media Queries */
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  #home .container {
+    flex-direction: row-reverse;
+    gap: 2.8rem;
+
+    padding: 0 3rem 10.2rem 11rem;
+  }
+
+  #home .home-text {
+    text-align: left;
+
+    margin: auto 0;
+    min-width: 45rem;
+  }
+
+  #home img:first-child {
+    width: min(720px, 100%);
+  }
+
+  #home h1 {
+    font-size: 4rem;
+
+    margin: 0 0 0.8rem;
+  }
+
+  #home p {
+    font-size: 2.8rem;
+
+    margin-bottom: 15rem;
+  }
+
+  #about .container {
+    justify-content: center;
+    gap: 3rem;
+
+    padding: 6.4rem 11rem;
+  }
+
+  #about .card {
+    height: 52rem;
+    text-align: center;
+  }
+
+  #about .card p {
+    font-size: 1.8rem;
+  }
+
+  #contact .container {
+    padding: 0;
+    background: url(./assets/img-stars-desktop.png) no-repeat right;
+  }
+
+  #contact form {
+    padding: 9.5rem 9.2rem 9.5rem 11rem;
+  }
+
+  #contact legend {
+    font-size: 4.2rem;
+
+    margin-bottom: 3rem;
+  }
+
+  #contact input,
+  #contact textarea {
+    width: 59.2rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  #home h1 {
+    font-size: 5.8rem;
+
+    padding-top: 31.2rem;
+    margin: 0 0 0.8rem;
+  }
+
+  #home p {
+    font-size: 3.2rem;
+
+    margin-bottom: 17.9rem;
+  }
+
+  #about .container {
+    gap: 6;
+  }
+
+  #about .card {
+    padding: 3.2rem;
+
+    max-width: 43rem;
+    height: 44rem;
+
+    text-align: start;
+  }
+
+  #about .card img {
+    width: 9.7rem;
+    height: 9.7rem;
+  }
+
+  #about .card h2 {
+    font-size: 3.6rem;
+
+    margin: 4rem 0 2.4rem;
+  }
+
+  #about .card p {
+    font-size: 1.9rem;
+    text-align: justify;
+  }
+}
+
+/* Animations */
