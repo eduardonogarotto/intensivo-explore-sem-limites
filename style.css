@@ -82,6 +82,8 @@ footer {
 #home img:last-child {
   width: 5.9rem;
   height: 10.5rem;
+
+  animation: arrow-down 1s ease-in infinite;
 }
 
 #about .container {
@@ -173,11 +175,6 @@ footer {
   border: 0;
   border-radius: 1.6rem;
   background: var(--color-base-blue-gradient);
-}
-
-#contact button:hover {
-  cursor: pointer;
-  transform: scale(1.1);
 }
 
 footer p {
@@ -308,3 +305,25 @@ footer p {
 }
 
 /* Animations */
+#contact button:hover {
+    cursor: pointer;    
+    filter: saturate(150%);
+  
+    animation: button-background 2s linear infinite alternate both;
+}
+
+@keyframes button-background {
+  from {
+    background: var(--color-base-magenta);
+    
+  }
+  to {  
+    background: var(--color-base-blue);
+  }
+}
+
+@keyframes arrow-down {
+  to {
+    transform: translateY(2rem);
+  }
+}
